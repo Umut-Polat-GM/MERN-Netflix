@@ -1,10 +1,13 @@
+import Navbar from "../../components/Navbar";
 
 const HomeScreen = () => {
-  return (
-    <div>
-      HomeScreen
-    </div>
-  )
-}
+    return (
+        <>
+            <div className="relative h-screen text-white bg-black">
+                <Navbar />
+            </div>
+        </>
+    );
+};
 
-export default HomeScreen
+export default HomeScreen;
