@@ -10,10 +10,10 @@ import { Toaster } from "react-hot-toast";
 import { Loader } from "lucide-react";
 
 import { useEffect } from "react";
+import WatchPage from "./pages/WatchPage";
 
 function App() {
     const { user, isCheckingAuth, authCheck } = useAuthStore();
-    console.log("User: ", user);
 
     useEffect(() => {
         authCheck();
@@ -35,6 +35,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path='/login' element={!user ? <LoginPage /> : <Navigate to={"/"} />} />
 				<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to={"/"} />} />
+                <Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={"/login"} />} />
             </Routes>
             <Footer />
         </>
