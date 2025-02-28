@@ -32,8 +32,9 @@
     left: 10vw;
     position: absolute;
     right: 10vw;
-    top: -10vw;
+    top: 0;
     z-index: -1;
+    height: 100vh;
 }
 
 ::-webkit-scrollbar {
